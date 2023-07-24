@@ -12,8 +12,8 @@ async function playMusic() {
     const playDelay = (60 / BEATS_PER_MINUTE) * 1000;
 
     for (const note of notes) {
-        const audioId = `${note.pitch}${note.accidental || ""}${note.octave}`;
-        const audioElement = document.getElementById(audioId) as HTMLAudioElement;
+        const musicId = `${note.pitch}${note.accidental || ""}${note.octave}`;
+        const audioElement = document.getElementById(musicId) as HTMLAudioElement;
 
         if (audioElement) {
             audioElement.play();
